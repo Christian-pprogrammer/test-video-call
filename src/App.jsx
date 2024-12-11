@@ -110,6 +110,7 @@ function App() {
   
       socketRef.current.on("callDeclined", (data) => {
         console.log("Call was declined: ", data);
+        alert("Call was declined.", data.message);
       });
   
       socketRef.current.on("callAccepted", (data) => {
